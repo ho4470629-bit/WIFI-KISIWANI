@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NEXT LEVEL WIFI Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Body na Background HD + Gradient Overlay */
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600185368386-dfbcd82a90cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+h1{
+  margin-bottom: 15px;
+  color:#00ffcc;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* Form */
+.box{
+  background: rgba(26,26,26,0.9);
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+label{
+  display:block;
+  text-align:left;
+  margin-top:10px;
+  font-weight:bold;
+  color:#00ffcc;
+}
+input, select{
+  width: 100%;
+  padding: 10px;
+  margin-top:5px;
+  border-radius:5px;
+  border:none;
+}
+input[type="submit"]{
+  background: #00cc66;
+  color:white;
+  font-weight:bold;
+  margin-top:20px;
+  cursor:pointer;
+  transition: 0.3s;
+}
+input[type="submit"]:hover{
+  background: #00994d;
+  transform:scale(1.02);
+}
+p.notice{
+  color: yellow;
+  font-size: 14px;
+}
+
+/* WiFi list */
+.wifi-list{
+  text-align:left;
+  margin: 20px auto;
+  max-width: 400px;
+  background: rgba(0,0,0,0.7);
+  padding:15px;
+  border-radius:10px;
+}
+.wifi-list li{
+  margin: 5px 0;
+  font-weight:bold;
+  color:#00ffcc;
+}
+
+/* Trust Section */
+.trust{
+  background: rgba(17,17,17,0.9);
+  border:2px solid #00cc66;
+  padding:20px;
+  margin:25px auto;
+  border-radius:10px;
+  max-width:500px;
+  text-align:left;
+}
+.trust h2{
+  color:#00cc66;
+  margin-bottom:10px;
+}
+.trust p{
+  color:#ffffff;
+  font-size:14px;
+  line-height:1.5;
+}
+.trust p span{
+  color:#00ffcc;
+  font-weight:bold;
+}
+
+/* Instructions Section */
+.instructions{
+  background: rgba(26,26,26,0.9);
+  padding:20px;
+  margin:20px auto;
+  border-radius:10px;
+  max-width:500px;
+  text-align:left;
+}
+.instructions h2{
+  color:#00ffcc;
+  margin-bottom:10px;
+}
+.instructions ol{
+  color:white;
+  line-height:1.5;
+}
+.instructions ol li{
+  margin:5px 0;
+}
+
+/* Chart Section Fupisha */
+.chart-section{
+  background: rgba(26,26,26,0.9);
+  padding: 15px;
+  margin: 20px auto;
+  border-radius:10px;
+  max-width:400px;
+  text-align:center;
+}
+.chart-section h2{
+  color:#00ffcc;
+  margin-bottom:10px;
+  font-size:18px;
+}
+.chart{
+  display:flex;
+  justify-content: space-around;
+  align-items:flex-end;
+  height:250px;
+}
+.bar{
+  width:60px;
+  background: #00cc66;
+  border-radius:5px 5px 0 0;
+  position: relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  transition: 0.3s;
+}
+.bar span{
+  color:white;
+  font-weight:bold;
+  position:absolute;
+  bottom: -20px;
+  text-align:center;
+  width:100%;
+  font-size:12px;
+}
+.bar:hover{
+  background:#00994d;
+  transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<h1>NEXT LEVEL WIFI</h1>
+
+<!-- WiFi Networks -->
+<div class="wifi-list">
+<h2>Available Networks</h2>
+<ul>
+<li>NEXT LEVEL STUDIO 1</li>
+<li>NEXT LEVEL STUDIO 2</li>
+</ul>
+</div>
+
+<div class="box">
+<form id="wifiForm">
+<label>Jina:</label>
+<input type="text" name="name" placeholder="Jina lako" required>
+
+<label>Namba ya simu:</label>
+<input type="text" name="phone" placeholder="Ex: 0763xxxxxx" required>
+
+<label>Chagua kifurushi:</label>
+<select name="package" required>
+<option value="Daily Tsh 1000">Daily Tsh 1000</option>
+<option value="Weekly Tsh 5000">Weekly Tsh 5000</option>
+<option value="Monthly Tsh 15000">Monthly Tsh 15000</option>
+</select>
+
+<input type="submit" value="Activate WiFi">
+<p class="notice">Automatic hotspot activation not available yet. You will receive WhatsApp confirmation.</p>
+</form>
+</div>
+
+<!-- Trust Section -->
+<div class="trust">
+<h2>Uhakika na Uaminifu</h2>
+<p>
+Tunajiamini <span>100%</span> kwa huduma yetu ya WiFi. Ikiwa internet itakusumbua au haifanyi kazi kama ilivyotarajiwa, 
+tutakulipia pesa yako bila malalamiko. Wateja wetu ni kipaumbele chetu, na tunahakikisha kila muunganisho unakuwa salama na wenye kasi.
+</p>
+<p>
+Jaribu huduma yetu kwa amani ya akili – wewe unafurahia, sisi tunahakikisha ubora.
+</p>
+</div>
+
+<!-- Instructions Section -->
+<div class="instructions">
+<h2>Jinsi ya Kuunganisha WiFi</h2>
+<ol>
+<li><strong>Simu / Tablet:</strong> Settings ? Wi-Fi ? Chagua "NEXT LEVEL STUDIO 1" au "NEXT LEVEL STUDIO 2" ? Ingiza password ? Connect.</li>
+<li><strong>PC / Laptop:</strong> Wi-Fi settings ? Chagua network ? Ingiza password ? Connect.</li>
+<li><strong>Smart TV:</strong> Settings ? Network ? Wi-Fi ? Chagua network ? Ingiza password ? Connect.</li>
+</ol>
+<p style="color:#00ffcc; font-weight:bold;">Kama una changamoto yoyote, tuma message kwenye WhatsApp 0768129449 na tutakuongoza.</p>
+</div>
+
+<!-- Package Chart -->
+<div class="chart-section">
+  <h2>Comparison ya Kifurushi</h2>
+  <div class="chart">
+    <div class="bar" style="height:60px;"><span>Daily 1k</span></div>
+    <div class="bar" style="height:150px;"><span>Weekly 5k</span></div>
+    <div class="bar" style="height:250px;"><span>Monthly 15k</span></div>
+  </div>
+</div>
+
+<script>
+const whatsappNumber = "255768129449"; 
+document.getElementById('wifiForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const form = e.target;
+  const name = encodeURIComponent(form.name.value);
+  const phone = encodeURIComponent(form.phone.value);
+  const pack = encodeURIComponent(form.package.value);
+  
+  const msg = `Mteja ame-order WiFi:\nJina: ${name}\nNamba: ${phone}\nKifurushi: ${pack}`;
+  const waLink = `https://wa.me/${whatsappNumber}?text=${msg}`;
+  
+  window.open(waLink, '_blank');
+  form.reset();
+  alert("Request sent! You will receive confirmation via WhatsApp.");
+});
+</script>
+
+</body>
+</html>
