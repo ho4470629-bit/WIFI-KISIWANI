@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NEXT LEVEL WIFI PRO | GOLD EDITION V4</title>
+    
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="NL WIFI">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffcc00; /* Gold */
+            --secondary: #d4af37; /* Metallic Gold */
+            --bg-dark: #0f172a; /* Deep Slate Blue */
+            --glass: rgba(30, 41, 59, 0.7);
+            --gold-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            --purple-accent: #8833ff; /* Deep Purple */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #020617;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(136, 51, 255, 0.15) 0px, transparent 50%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* GOLD LOGO 3D (Zambarau imeondolewa kabisa) */
+        .logo-container {
+            margin-top: 35px;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 20px; /* Squircle 3D shape */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--gold-shadow);
+            transform: rotate(-5deg);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 35px;
+            font-weight: 900;
+            color: #000;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            text-align: center;
+            margin: 20px 0 5px 0;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .backup-badge {
+            background: #ffffff;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: 800;
+            font-size: 10px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            border: 1px solid var(--primary);
+        }
+
+        /* PREMIUM 3D CARD */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 30px;
+            width: 85%;
+            max-width: 380px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(212, 175, 55, 0.05);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        /* INPUTS & SELECTS */
+        input, select, button {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 12px;
+            border: none;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        input { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.1); }
+        input:focus { border-color: var(--primary); outline: none; background: rgba(255,255,255,0.12); }
+
+        select { background: #1e293b; color: white; cursor: pointer; }
+
+        /* GOLD BUTTON */
+        button {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            transition: 0.3s;
+        }
+
+        button:hover { filter: brightness(1.1); transform: scale(1.01); }
+
+        /* CONTACTS */
+        .call-btn {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .map-box {
+            background: rgba(0,0,0,0.4);
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .map-box a { color: var(--primary); text-decoration: none; font-size: 12px; font-weight: 600; }
+
+        #admin-area { display: none; width: 100%; max-width: 400px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <span class="logo-text">NL</span>
+    </div>
+
+    <h1>NEXT LEVEL WIFI</h1>
+    <div class="backup-badge">? 6HRS POWER BACKUP ?</div>
+
+    <div class="card">
+        <h3 style="margin:0; color:var(--primary); font-size:18px;">Agiza Internet Yako</h3>
+        <p style="font-size:11px; color:#94a3b8; margin: 5px 0 20px 0;">Premium High-Speed Connection (40Mbps)</p>
+        
+        <input type="text" id="cust-name" placeholder="Jina Kamili">
+        <input type="tel" id="cust-phone" placeholder="Namba ya WhatsApp">
+        
+        <select id="cust-pkg">
+            <option value="Daily - 1000">Siku 1 - TZS 1,000</option>
+            <option value="Weekly - 5000">Wiki 1 - TZS 5,000</option>
+            <option value="Monthly - 15000">Mwezi 1 - TZS 15,000</option>
+        </select>
+        
+        <button onclick="playTap(); submitOrder()">AGIZA SASA</button>
+
+        <a href="tel:0768129449" class="call-btn" onclick="playTap()">
+            ?? PIGA: 0768 129 449
+        </a>
+
+        <div class="map-box">
+            <a href="https://maps.app.goo.gl/kMKmMQkt64VHSoe26" target="_blank">?? TAZAMA ENEO LETU KWENYE RAMANI</a>
+        </div>
+    </div>
+
+    <button onclick="playTap(); openAdmin()" style="background:none; color:#475569; border:none; box-shadow:none; font-size:11px; margin-top:30px;">
+        DATABASE ACCESS
+    </button>
+
+    <div id="admin-area">
+        <div class="card" style="border-color: #f8fafc;">
+            <h3 style="color:#f8fafc; margin:0;">ADMIN PORTAL</h3>
+            <input type="text" id="adm-n" placeholder="Jina">
+            <input type="tel" id="adm-p" placeholder="Namba">
+            <button onclick="playTap(); addUser()" style="background:#f8fafc; color:#000;">SAJILI MTEJA</button>
+            <div id="client-list" style="margin-top:15px;"></div>
+        </div>
+    </div>
+
+    <audio id="tapSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+<script>
+    const WIFI_PASS = "07lg9999";
+    const ADMIN_PASS = "hans"; // BADILISHA HAPA KWA USALAMA WA UONGOZI
+    const ADMIN_PHONE = "255768129449";
+
+    function playTap() { 
+        const s = document.getElementById('tapSound');
+        s.currentTime = 0; s.play(); 
+    }
+
+    function openAdmin() {
+        if(prompt("Admin PIN:") === ADMIN_PASS) {
+            document.getElementById('admin-area').style.display = "block";
+            render();
+        } else {
+            alert("PIN siyo sahihi. Huna idhini ya uongozi.");
+        }
+    }
+
+    function submitOrder() {
+        const n = document.getElementById('cust-name').value;
+        const p = document.getElementById('cust-phone').value;
+        const k = document.getElementById('cust-pkg').value;
+        if(!n || !p) return alert("Tafadhali jaza taarifa!");
+
+        let m = `?? *ORDER MPYA: NEXT LEVEL WIFI*\n\nNaitwa: ${n}\nNamba: ${p}\nKifurushi: ${k}\n\n_Naomba utaratibu wa kuunganishwa._`;
+        window.open(`https://wa.me/${ADMIN_PHONE}?text=${encodeURIComponent(m)}`);
+    }
+
+    let db = JSON.parse(localStorage.getItem("nl_gold_db")) || [];
+
+    function addUser() {
+        const n = document.getElementById('adm-n').value;
+        let p = document.getElementById('adm-p').value;
+        if(!n || !p) return alert("Jaza jina na namba!");
+        if(p.startsWith('0')) p = '255' + p.substring(1);
+
+        db.push({ name: n, phone: p });
+        localStorage.setItem("nl_gold_db", JSON.stringify(db));
+        render();
+
+        // ONYO KITAALAMU NA SHERIA YA UONGOZI (GOLD EDITION)
+        let warning = `?? *NEXT LEVEL WIFI - PREMIUM ACCESS* ??\n\n` +
+            `Karibu sana *${n}* kwenye mtandao wetu.\n\n` +
+            `?? *PASSWORD:* ${WIFI_PASS}\n` +
+            `?? *CUSTOMER CARE:* 0768129449\n\n` +
+            `?? *ILANI YA USALAMA NA USHINDANI (UONGOZI):*\n` +
+            `Password hii ni kwa ajili yako tu. Mfumo wetu unatumia *Hardware ID Binding* (kudhibiti kifaa chako). Ni kinyume na taratibu kugawana ufikiaji wako au kujaribu kutumia mfumo vibaya.\n\n` +
+            `? *HADHARI YA BLOCKING:* Uongozi wa NEXT LEVEL utatambua *Access Violation* mara moja na utapiga *Permanent Block* kifaa chako bila kurejeshewa gharama. Uongozi unahifadhi haki ya mwisho.\n\n` +
+            `??? _Enjoy Secure High-Speed Internet hata umeme ukikatika!_`;
+
+        window.open(`https://wa.me/${p}?text=${encodeURIComponent(warning)}`);
+    }
+
+    function render() {
+        const l = document.getElementById('client-list');
+        l.innerHTML = "";
+        db.forEach((u, i) => {
+            l.innerHTML += `<div style="background:rgba(255,255,255,0.05); padding:10px; border-radius:10px; margin-bottom:5px; font-size:11px; display:flex; justify-content:space-between; align-items:center;">
+                ${u.name} (${u.phone}) <button onclick="del(${i})" style="width:auto; background:red; padding:3px 8px; font-size:9px; color:white;">FUTA</button>
+            </div>`;
+        });
+    }
+
+    function del(i) { db.splice(i, 1); localStorage.setItem("nl_gold_db", JSON.stringify(db)); render(); }
+
+    render();
+</script>
+</body>
+</html>
